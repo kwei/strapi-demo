@@ -12,7 +12,9 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^1.1.0",
     "@strapi/plugin-cloud": "5.9.0",
+    "@strapi/plugin-documentation": "^5.9.0",
     "@strapi/plugin-users-permissions": "5.9.0",
     "@strapi/strapi": "5.9.0",
     "better-sqlite3": "11.3.0",

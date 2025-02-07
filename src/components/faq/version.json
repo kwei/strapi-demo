@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_faq_versions",
+  "info": {
+    "displayName": "Version",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "prodVerId": {
+      "type": "integer"
+    }
+  }
+}

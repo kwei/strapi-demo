@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_faq_products",
+  "info": {
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "prodId": {
+      "type": "integer"
+    },
+    "prodVerList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.version"
+    }
+  }
+}
