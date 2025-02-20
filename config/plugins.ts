@@ -29,5 +29,9 @@ export default () => ({
 			},
 			security: [ { bearerAuth: [] } ]
 		}
-	}
+	},
+	'extended-ckeditor': {
+		enabled: true,
+		resolve: './src/plugins/extended-ckeditor'
+	},
 });

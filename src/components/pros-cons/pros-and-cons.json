@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_pros_cons_pros_and_cons",
+  "info": {
+    "displayName": "Pros & Cons"
+  },
+  "options": {},
+  "attributes": {
+    "pros": {
+      "type": "json"
+    },
+    "cons": {
+      "type": "json"
+    }
+  }
+}

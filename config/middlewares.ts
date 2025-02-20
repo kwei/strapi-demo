@@ -8,7 +8,8 @@ export default [
 				useDefaults: true,
 				directives: {
 					'script-src': ['https://cdn.ckeditor.com'],
-					'connect-src': ["'self'", 'https:', 'https://proxy-event.ckeditor.com']
+					'connect-src': ["'self'", 'https:', 'https://proxy-event.ckeditor.com'],
+					'img-src': ["'self'", 'data:', 'https://assist.cyberlink.com'],
 				},
 			},
 		},

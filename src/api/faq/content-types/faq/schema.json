@@ -13,28 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "faqId": {
-      "type": "biginteger"
-    },
-    "question": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q",
-        "preset": "rich"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
-    },
-    "answer": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q",
-        "preset": "rich"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+      "type": "biginteger",
+      "required": true,
+      "unique": true
     },
     "catId": {
-      "type": "integer"
+      "type": "integer",
+      "required": false
     },
     "isShow": {
       "type": "boolean"
@@ -43,7 +28,8 @@
       "type": "string"
     },
     "typeId": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "isNeedFeedback": {
       "type": "boolean"
@@ -52,6 +38,24 @@
       "type": "component",
       "repeatable": true,
       "component": "faq.product"
+    },
+    "question": {
+      "type": "customField",
+      "options": {
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::extended-ckeditor.Customed-CKEditor"
+    },
+    "answer": {
+      "type": "customField",
+      "options": {
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::extended-ckeditor.Customed-CKEditor"
     }
   }
 }

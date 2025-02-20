@@ -1,0 +1,43 @@
+{
+  "version": "0.0.0",
+  "keywords": [],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test:ts:back": "run -T tsc -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "ckeditor5": "^44.1.0"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.0",
+    "@strapi/strapi": "^5.9.0"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "extended-ckeditor",
+    "displayName": "extended-ckeditor",
+    "description": "Extend the official CKEditor for source editing feature."
+  },
+  "name": "extended-ckeditor",
+  "description": "Extend the official CKEditor for source editing feature.",
+  "license": "MIT",
+  "author": "kw_yeh <kw_yeh@cyberlink.com>",
+  "yalcSig": "a946d104d9b1b7a669c37cfeea255f89"
+}

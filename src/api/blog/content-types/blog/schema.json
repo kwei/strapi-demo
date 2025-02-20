@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "viewTimes": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Video Editing",
+        "Video marketing",
+        "Photo Editing",
+        "Media Playback",
+        "Featured"
+      ]
+    },
+    "lang": {
+      "type": "enumeration",
+      "enum": [
+        "ENU",
+        "DEU",
+        "FRA",
+        "JPN",
+        "CHT",
+        "CHS",
+        "ESP",
+        "ITA",
+        "KOR"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "show": {
+      "type": "boolean"
+    },
+    "blogId": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "cluster": {
+      "type": "enumeration",
+      "enum": [
+        "YouTube Video Editing",
+        "Create Videos with Cool Effects",
+        "Best Video Editors",
+        "App Video Editing",
+        "Video Editing for Business",
+        "Video Editing for Instagram and TikTok",
+        "Video Marketing Tips",
+        "Trending Topics",
+        "App Photo Editing",
+        "Best Online Tools for Photo Editing",
+        "AI App Photo Editing",
+        "Video Editing Basics",
+        "Photo Editing Tips",
+        "Creating Podcasts",
+        "Best Software for Photo Editors",
+        "Best Audio Editors",
+        "Gaming Video Editing",
+        "Screen Recording",
+        "Photo Effects",
+        "Audio Editing",
+        "Webcam & Live Streams",
+        "Media Player",
+        "Beauty App Editing"
+      ]
+    },
+    "contentArea": {
+      "type": "dynamiczone",
+      "components": [
+        "media.media",
+        "section.section"
+      ]
+    }
+  }
+}

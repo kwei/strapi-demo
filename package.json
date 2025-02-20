@@ -18,6 +18,8 @@
     "@strapi/plugin-users-permissions": "5.9.0",
     "@strapi/strapi": "5.9.0",
     "better-sqlite3": "11.3.0",
+    "ckeditor5": "^44.1.0",
+    "extended-ckeditor": "file:.yalc/extended-ckeditor",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",

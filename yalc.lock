@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "extended-ckeditor": {
+      "signature": "a946d104d9b1b7a669c37cfeea255f89",
+      "file": true,
+      "replaced": "link:.yalc/extended-ckeditor"
+    }
+  }
+}

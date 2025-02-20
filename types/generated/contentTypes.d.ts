@@ -369,6 +369,80 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
+  collectionName: 'blogs';
+  info: {
+    description: '';
+    displayName: 'Blog';
+    pluralName: 'blogs';
+    singularName: 'blog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogId: Schema.Attribute.UID<'name'>;
+    category: Schema.Attribute.Enumeration<
+      [
+        'Video Editing',
+        'Video marketing',
+        'Photo Editing',
+        'Media Playback',
+        'Featured',
+      ]
+    >;
+    cluster: Schema.Attribute.Enumeration<
+      [
+        'YouTube Video Editing',
+        'Create Videos with Cool Effects',
+        'Best Video Editors',
+        'App Video Editing',
+        'Video Editing for Business',
+        'Video Editing for Instagram and TikTok',
+        'Video Marketing Tips',
+        'Trending Topics',
+        'App Photo Editing',
+        'Best Online Tools for Photo Editing',
+        'AI App Photo Editing',
+        'Video Editing Basics',
+        'Photo Editing Tips',
+        'Creating Podcasts',
+        'Best Software for Photo Editors',
+        'Best Audio Editors',
+        'Gaming Video Editing',
+        'Screen Recording',
+        'Photo Effects',
+        'Audio Editing',
+        'Webcam & Live Streams',
+        'Media Player',
+        'Beauty App Editing',
+      ]
+    >;
+    contentArea: Schema.Attribute.DynamicZone<
+      ['media.media', 'section.section']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    lang: Schema.Attribute.Enumeration<
+      ['ENU', 'DEU', 'FRA', 'JPN', 'CHT', 'CHS', 'ESP', 'ITA', 'KOR']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    show: Schema.Attribute.Boolean;
+    Thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    viewTimes: Schema.Attribute.Integer;
+  };
+}
+
 export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   collectionName: 'faqs';
   info: {
@@ -382,19 +456,21 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   };
   attributes: {
     answer: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
       Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
+        'plugin::extended-ckeditor.Customed-CKEditor',
         {
           licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q';
-          output: 'HTML';
-          preset: 'rich';
+          preset: 'light';
         }
       >;
     catId: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    faqId: Schema.Attribute.BigInteger;
+    faqId: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     isNeedFeedback: Schema.Attribute.Boolean;
     isShow: Schema.Attribute.Boolean;
     lang: Schema.Attribute.String;
@@ -404,15 +480,43 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     prodList: Schema.Attribute.Component<'faq.product', true>;
     publishedAt: Schema.Attribute.DateTime;
     question: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
       Schema.Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
+        'plugin::extended-ckeditor.Customed-CKEditor',
         {
           licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q';
-          output: 'HTML';
-          preset: 'rich';
+          preset: 'light';
         }
       >;
-    typeId: Schema.Attribute.Integer;
+    typeId: Schema.Attribute.Integer & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTestTest extends Struct.SingleTypeSchema {
+  collectionName: 'tests';
+  info: {
+    description: '';
+    displayName: 'TEST';
+    pluralName: 'tests';
+    singularName: 'test';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dynamicZone: Schema.Attribute.DynamicZone<
+      ['media.media', 'section.section']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::test.test'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -928,7 +1032,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::blog.blog': ApiBlogBlog;
       'api::faq.faq': ApiFaqFaq;
+      'api::test.test': ApiTestTest;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

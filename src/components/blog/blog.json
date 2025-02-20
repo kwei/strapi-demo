@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_blog_blogs",
+  "info": {
+    "displayName": "Blog"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "section_content": {
+      "type": "customField",
+      "options": {
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q",
+        "preset": "rich"
+      },
+      "customField": "plugin::extended-ckeditor.Customed-CKEditor"
+    },
+    "intro": {
+      "type": "customField",
+      "options": {
+        "preset": "light",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q"
+      },
+      "customField": "plugin::extended-ckeditor.Customed-CKEditor"
+    },
+    "table": {
+      "type": "customField",
+      "options": {
+        "preset": "rich",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q"
+      },
+      "customField": "plugin::extended-ckeditor.Customed-CKEditor"
+    },
+    "props_cons": {
+      "displayName": "Pros & Cons",
+      "type": "component",
+      "repeatable": false,
+      "component": "pros-cons.pros-and-cons"
+    },
+    "list": {
+      "type": "customField",
+      "options": {
+        "preset": "rich",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzA1MDg3OTksImp0aSI6ImVjYWU3NDE2LWQ5NTEtNDJiZi04ZDE0LTgzNzFmZWI4YWI1OSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIl0sInZjIjoiZTJhZWY4YTEifQ.ve5Dc20Gd1bit1GR0SbYp2TJowkbmTvGBQl1J9L6CXocvQsHcWKgDLlSBdOLuW1wRv1G91kOIMppSmUpym3L1Q"
+      },
+      "customField": "plugin::extended-ckeditor.Customed-CKEditor"
+    }
+  }
+}
